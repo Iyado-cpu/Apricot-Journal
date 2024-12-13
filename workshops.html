@@ -5,7 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writing Workshops - The Apricot Journal</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f1f1;
+            color: #333;
+        }
+        header {
+            background-color: rgba(150, 0, 0, 0.9);
+            padding: 20px;
+            position: relative;
+            height: 150px;
+            overflow: hidden;
+        }
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+        }
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 15px;
+            filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3));
+            transition: transform 0.3s ease;
+        }
+        .logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .journal-name {
+            font-weight: bold;
+            color: #fff;
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+        h1 {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            color: #fff;
+            font-size: 36px;
+            font-weight: 300;
+            width: auto;
+            text-align: center;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+        }
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: rgba(255,255,255,0.2);
+        }
+        nav {
+            background-color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        nav a:hover {
+            background-color: rgba(150, 0, 0, 0.1);
+            color: rgba(150, 0, 0, 0.9);
+        }
+        .workshops-content {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .workshops-content h2 {
+            color: rgba(150, 0, 0, 0.9);
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .workshops-content h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: rgba(150, 0, 0, 0.9);
+            margin: 20px auto 0;
+        }
+        .workshop-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .workshop-date {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: rgba(150, 0, 0, 0.9);
+        }
+        .workshop-link {
+            display: inline-block;
+            color: #fff;
+            background-color: rgba(150, 0, 0, 0.9);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        .workshop-link:hover {
+            background-color: rgba(120, 0, 0, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
