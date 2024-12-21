@@ -13,140 +13,151 @@
             background-color: #f9f1f1;
             color: #333;
         }
-
         header {
+            background-color: rgba(150, 0, 0, 0.9);
+            padding: 20px;
             position: relative;
-            text-align: center;
-            padding: 2rem 0;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 150px;
+            overflow: hidden;
         }
-
         .header-bg {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 100%;
-            background-color: #fff;
-            z-index: -1;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
         }
-
         .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
+            z-index: 10;
         }
-
         .logo {
             width: 100px;
             height: auto;
-            margin-right: 1rem;
+            margin-right: 15px;
+            filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3));
+            transition: transform 0.3s ease;
         }
-
+        .logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
         .journal-name {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ff8c42;
-        }
-
-        h1 {
-            margin: 0;
-            color: #333;
-            font-size: 2.5rem;
-        }
-
-        .header-accent {
-            height: 4px;
-            background-color: #ff8c42;
-            margin-top: 1rem;
-        }
-
-        nav {
-            background-color: #333;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav a {
+            font-weight: bold;
             color: #fff;
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+        h1 {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            color: #fff;
+            font-size: 36px;
+            font-weight: 300;
+            width: auto;
+            text-align: center;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+        }
+        .header-accent {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: rgba(255,255,255,0.2);
+        }
+        nav {
+            background-color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #333;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
-
         nav a:hover {
-            color: #ff8c42;
+            background-color: rgba(150, 0, 0, 0.1);
+            color: rgba(150, 0, 0, 0.9);
         }
-
         .releases-content {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 60px auto;
             padding: 0 20px;
         }
-
         .release-section {
-            margin-bottom: 3rem;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
-
         .release-section h2 {
-            color: #ff8c42;
-            border-bottom: 2px solid #ff8c42;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            color: rgba(150, 0, 0, 0.9);
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
         }
-
+        .release-section h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: rgba(150, 0, 0, 0.9);
+            margin: 20px auto 0;
+        }
         .release-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             justify-items: center;
         }
-
         .release-item {
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
         }
-
         .release-item:hover {
             transform: translateY(-5px);
         }
-
         .release-item img {
             width: 200px;
             height: 300px;
             object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
         .release-item p {
-            margin-top: 0.5rem;
+            margin-top: 15px;
             font-weight: 500;
             color: #333;
+            font-size: 16px;
         }
-
         @media (max-width: 768px) {
             .release-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                gap: 1rem;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
             }
-
             .release-item img {
                 width: 150px;
                 height: 225px;
-            }
-
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav a {
-                margin: 0.25rem;
             }
         }
     </style>
@@ -203,7 +214,7 @@
                     <a href="https://drive.google.com/file/d/1c-VbTyvnEJs_oGmEAicCyKN9KSUOPNO9/view" target="_blank">
                         <img src="images/image_2024-09-09_173907609.png" alt="Volume IV Issue 2 Cover">
                     </a>
-                    <p>Key Issue 2</p>
+                    <p>Issue 2</p>
                 </div>
                 <div class="release-item">
                     <a href="https://drive.google.com/file/d/1BAiIj3h2AsrWkqwKG7yQvh4p-EGMeUIp/view" target="_blank">
