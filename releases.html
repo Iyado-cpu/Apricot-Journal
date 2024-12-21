@@ -6,7 +6,6 @@
     <title>Releases - The Apricot Journal</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* All existing styles remain the same */
         body {
             font-family: 'Ubuntu', sans-serif;
             margin: 0;
@@ -14,7 +13,142 @@
             background-color: #f9f1f1;
             color: #333;
         }
-        /* ... rest of your existing CSS ... */
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background-color: #fff;
+            z-index: -1;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 1rem;
+        }
+
+        .journal-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff8c42;
+        }
+
+        h1 {
+            margin: 0;
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .header-accent {
+            height: 4px;
+            background-color: #ff8c42;
+            margin-top: 1rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff8c42;
+        }
+
+        .releases-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .release-section {
+            margin-bottom: 3rem;
+        }
+
+        .release-section h2 {
+            color: #ff8c42;
+            border-bottom: 2px solid #ff8c42;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .release-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        .release-item {
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .release-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .release-item img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .release-item p {
+            margin-top: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .release-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .release-item img {
+                width: 150px;
+                height: 225px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0.25rem;
+            }
+        }
     </style>
 </head>
 <body>
