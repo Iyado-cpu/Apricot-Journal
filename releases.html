@@ -124,11 +124,12 @@
             background-color: rgba(150, 0, 0, 0.9);
             margin: 20px auto 0;
         }
-        .release-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          .release-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
-            justify-items: center;
+
         }
         .release-item {
             text-align: center;
