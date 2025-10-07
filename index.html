@@ -98,6 +98,79 @@
             background-color: rgba(150, 0, 0, 0.1);
             color: rgba(150, 0, 0, 0.9);
         }
+
+        /* === Upcoming Events Section === */
+        .upcoming-events {
+            max-width: 1000px;
+            margin: 60px auto 0;
+            padding: 0 20px;
+            background-color: #fffdfd;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .upcoming-events h2 {
+            text-align: center;
+            color: rgba(150, 0, 0, 0.9);
+            margin: 30px 0;
+            font-size: 30px;
+            position: relative;
+        }
+        .upcoming-events h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: rgba(150, 0, 0, 0.9);
+            margin: 10px auto 0;
+        }
+        .events-board {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+        }
+        .event-card {
+            background-color: #fff;
+            border: 2px dashed rgba(150, 0, 0, 0.4);
+            border-radius: 12px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .event-card:hover {
+            transform: rotate(-1deg) scale(1.03);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+        }
+        .event-card::before {
+            content: '📌';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+        }
+        .event-card h3 {
+            color: rgba(150, 0, 0, 0.9);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .event-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .event-date {
+            font-weight: bold;
+            color: rgba(120, 0, 0, 0.9);
+            margin-top: 8px;
+        }
+
+        /* === Recent Releases Section === */
         .recent-releases {
             max-width: 1200px;
             margin: 60px auto;
@@ -183,7 +256,33 @@
         <a href="workshops.html">Writing Workshops</a>
         <a href="other.html">Other</a>
     </nav>
-    
+
+    <!-- === Upcoming Events Section === -->
+    <section class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <div class="events-board">
+            <div class="event-card">
+                <h3>Writing Workshop: Poetry Night</h3>
+                <p>Join us for an open mic session and share your creative work!</p>
+                <p class="event-date">📅 October 20, 2025</p>
+                <p>📍 Room 214, 3:30 PM</p>
+            </div>
+            <div class="event-card">
+                <h3>Submission Deadline</h3>
+                <p>Last chance to submit for our next issue!</p>
+                <p class="event-date">📅 November 5, 2025</p>
+                <p>📍 Online via Submissions Page</p>
+            </div>
+            <div class="event-card">
+                <h3>Winter Issue Launch Party</h3>
+                <p>Celebrate the release of Volume V, Issue 3 with snacks & readings.</p>
+                <p class="event-date">📅 December 15, 2025</p>
+                <p>📍 School Library</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- === Recent Releases Section === -->
     <section class="recent-releases">
         <h2>Recent Releases</h2>
         <div class="releases-grid">
@@ -206,6 +305,3 @@
     </section>
 </body>
 </html>
-
-
-
